@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    // Target modern Node.js – ES2022 gives us top-level await, structuredClone, etc.
+    // Docs: https://www.typescriptlang.org/tsconfig#target
+    "target": "ES2022",
+    // CommonJS is still the default module system for Node.js without ESM flags.
+    // Docs: https://www.typescriptlang.org/tsconfig#module
+    "module": "commonjs",
+    // Emit compiled JS to a separate directory, keeping source clean.
+    "outDir": "./dist",
+    // Allow importing .json files directly (handy for configs).
+    "resolveJsonModule": true,
+    // Strict mode enables all strict type-checking flags at once – highly recommended.
+    // Docs: https://www.typescriptlang.org/tsconfig#strict
+    "strict": true,
+    // Ensure each file is treated as an isolated module (required by some bundlers).
+    "isolatedModules": true,
+    // Skip type-checking of declaration files in node_modules (speeds up compilation).
+    "skipLibCheck": true,
+    // ES module interop: allows `import x from 'y'` for CommonJS modules.
+    "esModuleInterop": true,
+    // Keep source maps for debuggable stack traces.
+    "sourceMap": true,
+    // Include Node.js built-in type definitions (fs, path, process, etc.).
+    // https://www.typescriptlang.org/tsconfig#lib
+    "lib": [
+      "ES2022"
+    ],
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

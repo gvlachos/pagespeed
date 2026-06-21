@@ -1,0 +1,12 @@
+# pagespeed_batch URL list
+# ========================
+# One URL per line.
+# Lines starting with # are comments and are ignored.
+# Blank lines are also ignored.
+
+https://example.com
+https://google.com
+
+# Add your own URLs below:
+# https://yoursite.com
+# https://yoursite.com/about

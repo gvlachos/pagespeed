@@ -1,0 +1,19 @@
+{
+  "name": "pagespeed-insights-cli",
+  "version": "1.0.0",
+  "description": "CLI tool to query Google PageSpeed Insights and save a Markdown report",
+  "main": "./src/pagespeed.ts",
+  "scripts": {
+    "start": "ts-node pagespeed.ts",
+    "build": "tsc",
+    "run:example": "ts-node pagespeed.ts --url https://example.com --strategy mobile"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
